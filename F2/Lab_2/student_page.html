@@ -2,6 +2,11 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
+            rel="stylesheet"
+        />
         <title>Hello there</title>
         <style>
             html,
@@ -9,10 +14,11 @@
                 margin: 0;
                 padding: 0;
                 background-color: #fadcac;
+                font-family: "Merriweather", serif;
             }
 
             #content-wrapper {
-                width: 950px;
+                width: 930px;
                 margin-left: auto;
                 margin-right: auto;
             }
@@ -27,8 +33,9 @@
                 border-bottom-width: 3px;
                 border-bottom-style: groove;
                 border-bottom-color: #709bba;
-                padding-bottom: 50px;
+                padding-bottom: 30px;
                 padding-left: 0;
+                margin-top: 25px;
             }
 
             #row-1 a {
@@ -41,11 +48,13 @@
                 border-bottom-color: #709bba;
                 padding: 10px;
                 padding-bottom: 30px;
+                margin-top: 10px;
+                margin-bottom: 10px;
             }
 
             #row-2 p,
             #row-2 a {
-                font-size: 16pt;
+                font-size: 13pt;
             }
 
             #row-2 img {
@@ -53,7 +62,7 @@
             }
 
             #row-2 li {
-                font-size: 16pt;
+                font-size: 13pt;
             }
 
             #color {
@@ -68,7 +77,7 @@
 
             #row-2-column-2 {
                 float: left;
-                padding-left: 22px;
+                padding-left: 12px;
             }
 
             .clear {
@@ -80,11 +89,11 @@
             }
 
             #row-3 p {
-                font-size: 16pt;
+                font-size: 13pt;
             }
 
             #row-3 li {
-                font-size: 14pt;
+                font-size: 13pt;
             }
 
             #row-3-column-1 {
@@ -95,7 +104,7 @@
 
             #row-3-column-2 {
                 float: left;
-                padding-left: 22px;
+                padding-left: 12px;
             }
         </style>
     </head>
@@ -103,28 +112,34 @@
         <div id="content-wrapper">
             <div id="row-1">
                 <h1>Siqi(Kevin) Shan</h1>
-                <a>kshan@usc.edu</a>
+                <a href="mailto:kshan@usc.edu"><p>kshan@usc.edu</p></a>
             </div>
 
             <div id="row-2">
                 <div id="row-2-column-1">
-                    <p>Favorite Color: <a id="color">PURPLE</a></p>
-                    <p>Favorite Websites:</p>
+                    <p>
+                        <b>Favorite Color: <a id="color">PURPLE</a></b>
+                    </p>
+                    <p><b>Favorite Websites:</b></p>
                     <a href="https://www.twitch.tv/">Twitch</a>
                     <a href="https://stackoverflow.com/">Stack Overflow</a>
                     <a href="https://www.reddit.com/r/wallstreetbets/">
                         r/wallstreetbets
                     </a>
-                    <p>Favorite Activity:</p>
+                    <p><b>Favorite Activity:</b></p>
                     <img src="images/dp.gif" alt="Bad Access" />
                 </div>
                 <div id="row-2-column-2">
-                    <p>Spring 2021 Schedule:</p>
+                    <p><b>Spring 2021 Schedule:</b></p>
                     <ul>
-                        <li>CSCI 356: Introduction to Computer Systems</li>
-                        <li>ITP 303: Full-Stack Web Development</li>
-                        <li>BUAD 215: Foundations of Business Finance</li>
-                        <li>LING 115: Language and Society</li>
+                        <li>
+                            <p>CSCI 356: Introduction to Computer Systems</p>
+                        </li>
+                        <li><p>ITP 303: Full-Stack Web Development</p></li>
+                        <li>
+                            <p>BUAD 215: Foundations of Business Finance</p>
+                        </li>
+                        <li><p>LING 115: Language and Society</p></li>
                     </ul>
                 </div>
                 <div class="clear"></div>
@@ -138,13 +153,25 @@
                             <a
                                 href="http://303.itpwebdev.com/~kshan/assignment1/interest.html"
                             >
-                                A1: Interests Page
+                                <p>A1: Interests Page</p>
                             </a>
                         </li>
                     </ul>
                 </div>
                 <div id="row-3-column-2">
                     <p><b>Labs:</b></p>
+                    <ul>
+                        <li>
+                            <a><p>L1: Student Page & Server Set-up</p></a>
+                        </li>
+                        <li>
+                            <a
+                                href="http://303.itpwebdev.com/~kshan/student_page.html"
+                            >
+                                <p>L2: Updated Student Page</p>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
