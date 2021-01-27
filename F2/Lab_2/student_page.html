@@ -35,12 +35,67 @@
                 font-size: 14pt;
             }
 
-            #row-2 p {
+            #row-2 {
+                border-bottom-width: 3px;
+                border-bottom-style: groove;
+                border-bottom-color: #709bba;
+                padding: 10px;
+                padding-bottom: 30px;
+            }
+
+            #row-2 p,
+            #row-2 a {
                 font-size: 16pt;
             }
 
-            #row-2 a {
-                color: #8a2be2;
+            #row-2 img {
+                width: 460px;
+            }
+
+            #row-2 li {
+                font-size: 16pt;
+            }
+
+            #color {
+                background-color: #8a2be2;
+                color: #ffffff;
+            }
+
+            #row-2-column-1 {
+                float: left;
+                margin-left: 16px;
+            }
+
+            #row-2-column-2 {
+                float: left;
+                padding-left: 22px;
+            }
+
+            .clear {
+                clear: both;
+            }
+
+            #row-3 {
+                padding: 20px;
+            }
+
+            #row-3 p {
+                font-size: 16pt;
+            }
+
+            #row-3 li {
+                font-size: 14pt;
+            }
+
+            #row-3-column-1 {
+                float: left;
+                margin-left: 6px;
+                width: 460px;
+            }
+
+            #row-3-column-2 {
+                float: left;
+                padding-left: 22px;
             }
         </style>
     </head>
@@ -48,14 +103,49 @@
         <div id="content-wrapper">
             <div id="row-1">
                 <h1>Siqi(Kevin) Shan</h1>
-                <a href="/">kshan@usc.edu</a>
+                <a>kshan@usc.edu</a>
             </div>
 
             <div id="row-2">
-                <div id="left-column">
-                    <p>Favorite color: <a>PURPLE</a></p>
+                <div id="row-2-column-1">
+                    <p>Favorite Color: <a id="color">PURPLE</a></p>
+                    <p>Favorite Websites:</p>
+                    <a href="https://www.twitch.tv/">Twitch</a>
+                    <a href="https://stackoverflow.com/">Stack Overflow</a>
+                    <a href="https://www.reddit.com/r/wallstreetbets/">
+                        r/wallstreetbets
+                    </a>
+                    <p>Favorite Activity:</p>
+                    <img src="images/dp.gif" alt="Bad Access" />
                 </div>
-                <div id="right-column"></div>
+                <div id="row-2-column-2">
+                    <p>Spring 2021 Schedule:</p>
+                    <ul>
+                        <li>CSCI 356: Introduction to Computer Systems</li>
+                        <li>ITP 303: Full-Stack Web Development</li>
+                        <li>BUAD 215: Foundations of Business Finance</li>
+                        <li>LING 115: Language and Society</li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <div id="row-3">
+                <div id="row-3-column-1">
+                    <p><b>Assignments:</b></p>
+                    <ul>
+                        <li>
+                            <a
+                                href="http://303.itpwebdev.com/~kshan/assignment1/interest.html"
+                            >
+                                A1: Interests Page
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="row-3-column-2">
+                    <p><b>Labs:</b></p>
+                </div>
             </div>
         </div>
     </body>
