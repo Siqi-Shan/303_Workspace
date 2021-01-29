@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&display=swap");
+
+@font-face {
+    font-family: Daft-Punk;
+    src: url("./fonts/Daft\ Font.TTF");
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Gentium Book Basic", serif;
+}
+
+#header {
+    background-color: bisque;
+    padding: 10px;
+}
+
+#header h1 {
+    font-size: 35pt;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 80%;
+}
+
+.product-wrapper {
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+#product-name {
+    width: 80%;
+    font-size: 30pt;
+    font-weight: 800;
+    text-align: center;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-top-color: darkslateblue;
+    border-bottom-color: darkslateblue;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#product-name-image {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#product-name img {
+    display: block;
+    width: 25%;
+    position: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* #product-name h3 {
+    font-size: 40pt;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Daft-Punk;
+} */
+
+#product-image {
+    width: 95%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+#product-image img {
+    width: 100%;
+}
+
+#promo {
+    font-size: 16pt;
+    font-weight: 600;
+    text-align: center;
+    width: 70%;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border-style: solid;
+    border-radius: 50px;
+    border-width: 3px;
+    border-color: darkslateblue;
+    background-color: mediumspringgreen;
+}
