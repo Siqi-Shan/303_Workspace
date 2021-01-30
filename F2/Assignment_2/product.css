@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&display=swap");
 
-@font-face {
-    font-family: Daft-Punk;
-    src: url("./fonts/Daft\ Font.TTF");
-}
-
 html,
 body {
     padding: 0;
