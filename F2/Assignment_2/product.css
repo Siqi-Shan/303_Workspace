@@ -12,6 +12,10 @@ body {
     font-family: "Gentium Book Basic", serif;
 }
 
+body {
+    background-color: lightsteelblue;
+}
+
 #header {
     background-color: bisque;
     padding: 10px;
@@ -63,6 +67,10 @@ body {
     position: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+#product-name-tablet {
+    display: none;
 }
 
 /* #product-name h3 {
@@ -153,9 +161,102 @@ body {
     border-style: solid;
     border-color: darkviolet;
     border-width: 4px;
+    position: relative;
 }
 
 .image img {
     width: 100%;
     display: block;
+}
+
+.image h3 {
+    font-size: 33pt;
+    font-weight: 1000;
+    color: darkorange;
+    position: absolute;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    left: 10%;
+    right: 10%;
+    top: 50%;
+    visibility: hidden;
+    box-sizing: border-box;
+}
+
+.image:hover img {
+    opacity: 0.6;
+}
+
+.image:hover h3 {
+    visibility: visible;
+}
+
+@media (min-width: 768px) {
+    .product-wrapper #product-name {
+        display: none;
+    }
+
+    #product-image-promo {
+        float: left;
+        width: 45%;
+        margin-left: 1%;
+        margin-top: 10px;
+    }
+
+    #promo {
+        font-size: 13pt;
+        font-weight: 600;
+        text-align: center;
+        width: 78%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+        border-style: solid;
+        border-radius: 50px;
+        border-width: 3px;
+        border-color: darkslateblue;
+        background-color: mediumspringgreen;
+    }
+
+    #product-name-tablet {
+        display: block;
+        float: left;
+        width: 48%;
+        font-size: 25pt;
+        font-weight: 800;
+        text-align: center;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-top-style: solid;
+        border-bottom-style: solid;
+        border-width: 1px;
+        border-top-color: darkslateblue;
+        border-bottom-color: darkslateblue;
+        margin-left: 3%;
+        margin-top: 10px;
+    }
+
+    #product-information {
+        float: left;
+        padding: 1.5%;
+        margin-left: 3%;
+        margin-right: auto;
+        width: 46%;
+    }
+
+    .product-information-review {
+        font-size: 14pt;
+        font-weight: 550;
+    }
+
+    .product-information-description {
+        font-size: 14pt;
+        font-weight: 550;
+    }
 }
