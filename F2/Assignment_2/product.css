@@ -75,13 +75,13 @@ body {
     font-family: Daft-Punk;
 } */
 
-#product-image {
+#product-image-promo {
     width: 95%;
     margin: auto;
     margin-top: 40px;
 }
 
-#product-image img {
+#product-image-promo img {
     width: 100%;
 }
 
@@ -102,4 +102,36 @@ body {
     border-width: 3px;
     border-color: darkslateblue;
     background-color: mediumspringgreen;
+}
+
+#product-information {
+    float: left;
+    padding: 3%;
+}
+
+.product-information-review {
+    font-size: 16pt;
+    font-weight: 550;
+}
+
+.product-information-description {
+    font-size: 16pt;
+    font-weight: 550;
+}
+
+.product-wrapper::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.related-wrapper {
+    width: 90%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.related-wrapper h2 {
+    text-align: center;
 }
