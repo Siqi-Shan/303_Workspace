@@ -130,8 +130,32 @@ body {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 50px;
 }
 
 .related-wrapper h2 {
     text-align: center;
+}
+
+#related-images {
+    width: 100%;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-left: auto;
+}
+
+.image {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-style: solid;
+    border-color: darkviolet;
+    border-width: 4px;
+}
+
+.image img {
+    width: 100%;
+    display: block;
 }
