@@ -284,6 +284,16 @@ body {
 }
 
 @media (min-width: 992px) {
+    .product-wrapper {
+        max-width: 1000px;
+        box-sizing: border-box;
+    }
+
+    .related-wrapper {
+        max-width: 1000px;
+        box-sizing: border-box;
+    }
+
     #product-information {
         float: left;
         padding: 1.5%;
@@ -332,7 +342,7 @@ body {
         width: 80%;
         left: 10%;
         right: 10%;
-        top: 15%;
+        top: 10%;
         visibility: hidden;
         box-sizing: border-box;
     }
