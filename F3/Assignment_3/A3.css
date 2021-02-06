@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Enriqueta:wght@500&display=swap");
+
+body {
+    font-family: "Enriqueta", serif;
+}
+
+#bridges-logo {
+    font-family: "Big Shoulders Stencil Display", cursive;
+}
+
+nav {
+    background-color: darkslateblue;
+}
+
+.header-image {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url("./images/crypto.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bridges-intro {
+    color: lightsalmon;
+}
