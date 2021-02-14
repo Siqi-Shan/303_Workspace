@@ -197,7 +197,7 @@
             tshirtForm.addEventListener("submit", (e) => {
                 e.preventDefault();
                 if (!validate) {
-                    if (inputText.value.trim().length == 0) {
+                    if (inputText.value.trim().length === 0) {
                         inputText.classList.add("is-invalid");
                         errorMessage.textContent = "Text is required";
                     } else {
