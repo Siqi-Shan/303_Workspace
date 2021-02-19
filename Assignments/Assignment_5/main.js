@@ -54,7 +54,7 @@ const updateCards = function () {
 
             let newOverview = element.overview;
             if (newOverview.length > 200) {
-                newOverview = newOverview.slice(0, 201) + "...";
+                newOverview = newOverview.slice(0, 200) + "...";
             }
 
             const cardContent = `
