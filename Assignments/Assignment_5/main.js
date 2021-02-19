@@ -42,6 +42,7 @@ const updateCards = function () {
         if (data.total_results === 0) {
             notfoundMessage.style.display = "block";
             normalMessage.style.display = "none";
+            return;
         }
 
         currentNum.textContent = data.results.length;
