@@ -32,7 +32,7 @@
 }
 
 .info-wrapper:hover img {
-    opacity: 0.3;
+    opacity: 0.25;
 }
 
 .info-wrapper:hover .info {

@@ -57,7 +57,7 @@ const updateCards = function () {
             }
 
             const cardContent = `
-                <div class="card border-dark text-center shadow-lg">
+                <div class="card border-light text-center shadow-lg">
                     <div class="info-wrapper">
                         <img
                             src="${
