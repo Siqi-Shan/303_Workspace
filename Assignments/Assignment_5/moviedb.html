@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+            crossorigin="anonymous"
+        />
+        <title>Cinema News Vendor</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <h1 class="col-12 mt-4 ms-3">Cinema News Vendor</h1>
+            </div>
+
+            <div class="row">
+                <form
+                    action=""
+                    method=""
+                    class="col-12 mt-4 ms-3"
+                    id="search-form"
+                >
+                    <div class="row">
+                        <div class="mb-3 col-lg-6 col-md-8 col-12">
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="movieName"
+                                placeholder="Search..."
+                            />
+                            <div class="form-text">
+                                Please enter the search term
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            <button type="submit" class="btn btn-primary">
+                                Search
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="ms-3 me-3">
+                <div class="col-12 mt-3">
+                    Showing <span id="currentNum" class="fw-bolder">20</span> of
+                    <span id="totalNum" class="fw-bolder">1970</span> results
+                </div>
+            </div>
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
