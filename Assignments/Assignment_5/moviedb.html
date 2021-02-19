@@ -10,12 +10,13 @@
             integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
             crossorigin="anonymous"
         />
+        <link rel="stylesheet" href="./style.css" />
         <title>Cinema News Vendor</title>
     </head>
     <body>
         <div class="container-fluid">
             <div class="row">
-                <h1 class="col-12 mt-4 ms-3">Cinema News Vendor</h1>
+                <h1 class="col-12 mt-4 ms-3 title">Cinema News Vendor</h1>
             </div>
 
             <div class="row">
@@ -30,7 +31,7 @@
                             <input
                                 type="text"
                                 class="form-control"
-                                id="movieName"
+                                id="search-term"
                                 placeholder="Search..."
                             />
                             <div class="form-text">
@@ -47,9 +48,52 @@
             </div>
 
             <div class="ms-3 me-3">
-                <div class="col-12 mt-3">
-                    Showing <span id="currentNum" class="fw-bolder">20</span> of
-                    <span id="totalNum" class="fw-bolder">1970</span> results
+                <div class="col-12 mt-3 fs-5" id="normal-message">
+                    Showing <span id="current-num" class="fw-bolder">0</span> of
+                    <span id="total-num" class="fw-bolder">0</span> results
+                </div>
+                <div class="col-12 mt-3 fs-5" id="notfound-message">
+                    No results found.
+                </div>
+                <div class="col-12 mt-3" id="error-message">
+                    <b>An error occurred.</b>
+                </div>
+                <div class="row" id="movie-list">
+                    <div class="col-6 col-md-4 col-lg-3 my-3">
+                        <div class="card border-dark text-center">
+                            <div class="info-wrapper">
+                                <img
+                                    src="./images/Image-Not-Available.png"
+                                    class="card-img-top"
+                                    alt="..."
+                                />
+                                <div class="info">
+                                    <h5 class="card-title rating">
+                                        Card title
+                                    </h5>
+                                    <p class="card-text vote">
+                                        This is a wider card with supporting
+                                        text below as a natural lead-in to
+                                        additional content. This content is a
+                                        little bit longer.
+                                    </p>
+                                    <p class="card-text overview">
+                                        Last updated 3 mins ago
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title movie-title">
+                                    Special title treatment
+                                </h5>
+                                <p class="card-text movie-date">
+                                    Some quick example text to build on the card
+                                    title and make up the bulk of the card's
+                                    content.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -59,5 +103,6 @@
             integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
             crossorigin="anonymous"
         ></script>
+        <script src="./main.js"></script>
     </body>
 </html>

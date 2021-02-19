@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+#error-message {
+    color: red;
+    visibility: hidden;
+}
+
+#notfound-message {
+    display: none;
+}
+
+.info-wrapper {
+    position: relative;
+}
+
+.info-wrapper .info {
+    color: white;
+    visibility: hidden;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: 10%;
+}
+
+.info-wrapper:hover {
+    background-color: black;
+}
+
+.info-wrapper:hover img {
+    opacity: 0.3;
+}
+
+.info-wrapper:hover .info {
+    visibility: visible;
+}
+
+.title {
+    font-size: 2.5vw;
+}
+
+.rating {
+    font-size: 2.1vw;
+}
+
+.vote {
+    font-size: 1.2vw;
+}
+
+.overview {
+    font-size: 1.1vw;
+}
+
+.movie-title {
+    font-size: 1.55vw;
+}
+
+.movie-date {
+    font-size: 1.05vw;
+}
+
+@media (max-width: 991px) {
+    .title {
+        font-size: 5vw;
+    }
+
+    .rating {
+        font-size: 2.75vw;
+    }
+
+    .vote {
+        font-size: 2vw;
+    }
+
+    .overview {
+        font-size: 1.75vw;
+    }
+
+    .movie-title {
+        font-size: 2.75vw;
+    }
+
+    .movie-date {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .title {
+        font-size: 8vw;
+    }
+
+    .rating {
+        font-size: 4vw;
+    }
+
+    .vote {
+        font-size: 3vw;
+    }
+
+    .overview {
+        font-size: 2.75vw;
+    }
+
+    .movie-title {
+        font-size: 4vw;
+    }
+
+    .movie-date {
+        font-size: 3vw;
+    }
+}
