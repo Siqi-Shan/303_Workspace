@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #ffa07a;
+}
+
+.header {
+    font-family: "Bree Serif", serif;
+    border-style: groove;
+    border-color: darkslateblue;
+    border-radius: 10px;
+    border-width: 4px;
+    font-size: 22pt;
+    text-align: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.todolist-wrapper {
+    font-family: "Source Sans Pro", sans-serif;
+    border-style: groove;
+    border-color: darkslateblue;
+    border-radius: 10px;
+    border-width: 2px;
+    width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0px;
+    padding-left: 25px;
+    padding-bottom: 20px;
+    background-color: lightsteelblue;
+}
+
+#todolist-title {
+    font-family: "Bree Serif", serif;
+    font-size: 28pt;
+    font-weight: 580;
+}
+
+.items-wrapper {
+    font-size: 18pt;
+    line-height: 1.8;
+}
+
+#new-item {
+    font-size: 12pt;
+    background-color: lightgrey;
+    border-style: solid;
+    border-color: lightslategrey;
+    border-radius: 10px;
+    border-width: 2px;
+    padding: 12px 20px;
+    width: 70%;
+    outline-width: 0;
+}

@@ -18,11 +18,11 @@ const clearList = function () {
     normalMessage.style.display = "block";
 };
 
-const showError = function () {
-    const errorMessage = document.querySelector("#error-message");
-    normalMessage.style.visibility = "hidden";
-    errorMessage.style.visibility = "visible";
-};
+// const showError = function () {
+//     const errorMessage = document.querySelector("#error-message");
+//     normalMessage.style.visibility = "hidden";
+//     errorMessage.style.visibility = "visible";
+// };
 
 const ajax = function (endpoint, callback) {
     const request = new XMLHttpRequest();
@@ -30,8 +30,8 @@ const ajax = function (endpoint, callback) {
     request.open("GET", url);
     request.send();
     request.addEventListener("load", callback);
-    request.addEventListener("error", showError); //TODO: fix callback bug
-    request.addEventListener("abort", showError); //TODO: fix callback bug
+    // request.addEventListener("error", showError); //TODO: fix callback bug
+    // request.addEventListener("abort", showError); //TODO: fix callback bug
 };
 
 const updateCards = function () {
