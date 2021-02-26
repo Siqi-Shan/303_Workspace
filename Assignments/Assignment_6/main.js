@@ -58,3 +58,7 @@ $("#city").on("change", function () {
     getWeather(newCity);
     localStorage.setItem("weatherCity", JSON.stringify(newCity));
 });
+
+$(".item").on("click", function () {
+    $(this).toggleClass("item-text-crossed");
+});

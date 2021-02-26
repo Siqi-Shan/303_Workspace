@@ -41,7 +41,7 @@ body {
     border-style: groove;
     border-color: darkslateblue;
     border-radius: 10px;
-    border-width: 4px;
+    border-width: 3px;
     font-size: 18pt;
     width: 18%;
     padding: 2px;
@@ -49,6 +49,7 @@ body {
     position: relative;
     outline-width: 0;
     background-color: lightsteelblue;
+    cursor: pointer;
 }
 
 .todolist-wrapper {
@@ -84,13 +85,30 @@ body {
     background-color: lightgrey;
     border-left: none;
     border-right: none;
+    border-top-width: 3px;
     border-top-color: darkslateblue;
     border-bottom-width: 3px;
     border-bottom-color: darkslateblue;
-    border-top-width: 3px;
     margin-left: -25px;
     padding: 12px 20px;
     width: 574px;
     height: 60px;
     outline-width: 0;
+}
+
+.item {
+    border-left: none;
+    border-right: none;
+    border-top-width: 3px;
+    border-top-style: solid;
+    border-top-color: darkslateblue;
+    margin-left: -25px !important;
+}
+
+.item-text {
+    cursor: pointer;
+}
+
+.item-text-crossed {
+    text-decoration-line: line-through;
 }
