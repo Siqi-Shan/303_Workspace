@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #ffa07a;
+}
+
+.header {
+    font-family: "Bree Serif", serif;
+    border-style: groove;
+    border-color: darkslateblue;
+    border-radius: 10px;
+    border-width: 4px;
+    font-size: 22pt;
+    text-align: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#weather {
+    display: none;
+}
+
+#city {
+    font-family: "Bree Serif", serif;
+    border-style: groove;
+    border-color: darkslateblue;
+    border-radius: 10px;
+    border-width: 4px;
+    font-size: 18pt;
+    width: 18%;
+    padding: 2px;
+    padding-left: 20px;
+    position: relative;
+    outline-width: 0;
+    background-color: lightsteelblue;
+}
+
+.todolist-wrapper {
+    font-family: "Source Sans Pro", sans-serif;
+    border-style: groove;
+    border-color: darkslateblue;
+    border-radius: 10px;
+    border-width: 3px;
+    width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0px;
+    padding-left: 25px;
+    padding-bottom: 20px;
+    background-color: lightsteelblue;
+    box-shadow: 10px 10px 18px 4px lightslategray;
+}
+
+#todolist-title {
+    font-family: "Bree Serif", serif;
+    font-size: 28pt;
+    font-weight: 580;
+}
+
+.items-wrapper {
+    font-size: 18pt;
+    line-height: 1.8;
+}
+
+#new-item {
+    font-family: "Bree Serif", serif;
+    font-size: 16pt;
+    background-color: lightgrey;
+    border-left: none;
+    border-right: none;
+    border-top-color: darkslateblue;
+    border-bottom-width: 3px;
+    border-bottom-color: darkslateblue;
+    border-top-width: 3px;
+    margin-left: -25px;
+    padding: 12px 20px;
+    width: 574px;
+    height: 60px;
+    outline-width: 0;
+}
