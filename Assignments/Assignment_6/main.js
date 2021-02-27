@@ -59,6 +59,31 @@ $("#city").on("change", function () {
     localStorage.setItem("weatherCity", JSON.stringify(newCity));
 });
 
-$(".item").on("click", function () {
+$(".items").on("click", ".item .item-text", function () {
     $(this).toggleClass("item-text-crossed");
+    $(this).parent().toggleClass("item-crossed");
+});
+
+$(".items").on("click", ".item .remove-button", function () {
+    $(this).parent().fadeOut();
+});
+
+$("#new-item-form").on("submit", function (e) {
+    e.preventDefault();
+    let newItem = $("#new-item").val().trim();
+    if (newItem) {
+        let newHTML = ` <li class="item">
+                            <i class="far fa-square remove-button"></i>
+                            &nbsp;
+                            <span class="item-text">
+                                ${newItem}
+                            </span>
+                        </li>`;
+        $(".items").append(newHTML);
+    }
+    $("#new-item").val("");
+});
+
+$(".new-item-icon").on("click", function () {
+    $("#new-item-form").slideToggle();
 });
