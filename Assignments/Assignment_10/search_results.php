@@ -13,17 +13,8 @@
 
 	$mysqli->set_charset("utf8");
 
-	$title = $_GET["title"];
-	$genre = $_GET["genre"];
-	$rating = $_GET["rating"];
-	$label = $_GET["label"];
-	$format = $_GET["format"];
-	$sound = $_GET["sound"];
-	$award = $_GET["award"];
-	$release_date_from = $_GET["release_date_from"];
-	$release_date_to = $_GET["release_date_to"];
-
-	$sql = "SELECT dvd_titles.title title, dvd_titles.release_date release_date, g.genre genre, r.rating rating, dvd_titles.dvd_title_id id
+	$sql = "SELECT dvd_titles.title title, dvd_titles.release_date release_date, g.genre genre, 
+			r.rating rating, dvd_titles.dvd_title_id id
 			FROM dvd_titles
 			JOIN genres g
     			ON g.genre_id = dvd_titles.genre_id
@@ -31,49 +22,49 @@
     			ON r.rating_id = dvd_titles.rating_id
 			WHERE 1=1";
 
-	if (!empty($title)) {
+	if (isset($_GET["title"]) && !empty($_GET["title"])) {
 		$sql = $sql . " AND dvd_titles.title LIKE '%" . $title . "%'";
 	}
 
-	if (!empty($genre)) {
+	if (isset($_GET["genre"]) && !empty($_GET["genre"])) {
 		$sql = $sql . " AND dvd_titles.genre_id = " . $genre;
 	}
 
-	if (!empty($rating)) {
+	if (isset($_GET["rating"]) && !empty($_GET["rating"])) {
 		$sql = $sql . " AND dvd_titles.rating_id = " . $rating;
 	}
 
-	if (!empty($label)) {
+	if (isset($_GET["label"]) && !empty($_GET["label"])) {
 		$sql = $sql . " AND dvd_titles.label_id = " . $label;
 	}
 
-	if (!empty($format)) {
+	if (isset($_GET["format"]) && !empty($_GET["format"])) {
 		$sql = $sql . " AND dvd_titles.format_id = " . $format;
 	}
 
-	if (!empty($sound)) {
+	if (isset($_GET["sound"]) && !empty($_GET["sound"])) {
 		$sql = $sql . " AND dvd_titles.sound_id = " . $sound;
 	}
 
-	if (!empty($award)) {
-		if ($award == "yes") {
+	if (isset($_GET["award"]) && !empty($_GET["award"])) {
+		if ($_GET["award"] == "yes") {
 			$sql = $sql . " AND dvd_titles.award IS NOT NULL";
 		}
-		else if ($award == "no") {
+		else if ($_GET["award"] == "no") {
 			$sql = $sql . " AND dvd_titles.award IS NULL";
 		}
 	}
 
-	if (!empty($release_date_from) || !empty($release_date_to)) {
-		if (!empty($release_date_from) && !empty($release_date_to)) {
-			$sql = $sql . " AND " . $release_date_from . " <= dvd_titles.release_date";
-			$sql = $sql . " <= " . $release_date_to;
+	if (!empty($_GET["release_date_from"]) || !empty($_GET["release_date_to"])) {
+		if (!empty($_GET["release_date_from"]) && !empty($_GET["release_date_to"])) {
+			$sql = $sql . " AND '" . $_GET["release_date_from"] . "' <= dvd_titles.release_date";
+			$sql = $sql . " AND dvd_titles.release_date " . " <= '" . $_GET["release_date_to"] . "'";
 		}
-		else if (!empty($release_date_from)) {
-			$sql = $sql . " AND dvd_titles.release_date >= " . $release_date_from;
+		else if (!empty($_GET["release_date_from"])) {
+			$sql = $sql . " AND dvd_titles.release_date >= '" . $_GET["release_date_from"] . "'";
 		}
-		else if (!empty($release_date_to)) {
-			$sql = $sql . " AND dvd_titles.release_date <= " . $release_date_to;
+		else if (!empty($_GET["release_date_to"])) {
+			$sql = $sql . " AND dvd_titles.release_date <= '" . $_GET["release_date_to"] . "'";
 		}
 	}
 
@@ -98,6 +89,7 @@
 </head>
 <body>
 	<ol class="breadcrumb">
+		<li class="breadcrumb-item"><a href="index.php">Home</a></li>
 		<li class="breadcrumb-item"><a href="search_form.php">Search</a></li>
 		<li class="breadcrumb-item active">Results</li>
 	</ol>
@@ -122,6 +114,7 @@
 				<table class="table table-hover table-responsive mt-4">
 					<thead>
 						<tr>
+							<th></th>
 							<th>DVD Title</th>
 							<th>Release Date</th>
 							<th>Genre</th>
@@ -138,12 +131,9 @@
 									</a>
 								</td>
 								<td>
-									<a href="details.php?track_id=<?php echo $row['id']; ?>">
-										<?php echo $row['track']; ?>
+									<a href="details.php?dvd_id=<?php echo $row['id']; ?>">
+										<?php echo $row["title"]; ?>
 									</a>
-								</td>
-								<td>
-									<?php echo $row["title"]; ?>
 								</td>
 								<td>
 									<?php echo $row["release_date"]; ?>
