@@ -1,3 +1,35 @@
+<?php
+	$host = "303.itpwebdev.com";
+	$username = "kshan_db_user";
+	$password = "uscitp2021!";
+	$db = "kshan_dvd_db";
+
+	$mysqli = new mysqli($host, $username, $password, $db);
+
+	if ($mysqli->connect_errno) {
+		echo $mysqli->connect_error;
+		exit();
+	}
+
+	$sql_genre = "SELECT * FROM genres";
+	$sql_rating = "SELECT * FROM ratings";
+	$sql_label = "SELECT * FROM labels";
+	$sql_format = "SELECT * FROM formats";
+	$sql_sound = "SELECT * FROM sounds";
+
+	$result_genre = $mysqli->query($sql_genre);
+	$result_rating = $mysqli->query($sql_rating);
+	$result_label = $mysqli->query($sql_label);
+	$result_format = $mysqli->query($sql_format);
+	$result_sound = $mysqli->query($sql_sound);
+
+	if (!$result_genre || !$result_rating || !$result_label || !$result_format || !$result_sound) {
+		echo $mysqli->error;
+		exit();
+	}
+
+	$mysqli->close();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +60,7 @@
 
 	<div class="container">
 
-		<form>
+		<form action="add_confirmation.php" method="POST">
 
 			<div class="form-group row">
 				<label for="title-id" class="col-sm-3 col-form-label text-sm-right">Title: <span class="text-danger">*</span></label>
@@ -51,6 +83,11 @@
 						<option value="" selected disabled>-- Select One --</option>
 
 						<!-- PHP Output Here -->
+						<?php while ($row = $result_label->fetch_assoc()): ?>
+							<option value="<?php echo $row['label_id']; ?>">
+								<?php echo $row["label"]; ?>
+							</option>
+						<?php endwhile; ?>
 
 					</select>
 				</div>
@@ -63,6 +100,11 @@
 						<option value="" selected disabled>-- Select One --</option>
 
 						<!-- PHP Output Here -->
+						<?php while ($row = $result_sound->fetch_assoc()): ?>
+							<option value="<?php echo $row['sound_id']; ?>">
+								<?php echo $row["sound"]; ?>
+							</option>
+						<?php endwhile; ?>
 
 					</select>
 				</div>
@@ -75,6 +117,11 @@
 						<option value="" selected disabled>-- Select One --</option>
 
 						<!-- PHP Output Here -->
+						<?php while ($row = $result_genre->fetch_assoc()): ?>
+							<option value="<?php echo $row['genre_id']; ?>">
+								<?php echo $row["genre"]; ?>
+							</option>
+						<?php endwhile; ?>
 
 					</select>
 				</div>
@@ -87,6 +134,11 @@
 						<option value="" selected disabled>-- Select One --</option>
 
 						<!-- PHP Output Here -->
+						<?php while ($row = $result_rating->fetch_assoc()): ?>
+							<option value="<?php echo $row['rating_id']; ?>">
+								<?php echo $row["rating"]; ?>
+							</option>
+						<?php endwhile; ?>
 
 					</select>
 				</div>
@@ -99,6 +151,11 @@
 						<option value="" selected disabled>-- Select One --</option>
 
 						<!-- PHP Output Here -->
+						<?php while ($row = $result_format->fetch_assoc()): ?>
+							<option value="<?php echo $row['format_id']; ?>">
+								<?php echo $row["format"]; ?>
+							</option>
+						<?php endwhile; ?>
 
 					</select>
 				</div>

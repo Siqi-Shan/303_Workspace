@@ -1,5 +1,5 @@
 <?php
-	if(!isset($_GET["dvd_id"]) || empty($_GET["dvd_id"])) {
+	if (!isset($_GET["dvd_id"]) || empty($_GET["dvd_id"])) {
 		$error = "Invalid DVD";
 	}
 	else {
@@ -34,7 +34,7 @@
 
 		$results = $mysqli->query($sql);
 
-		if(!$results) {
+		if (!$results) {
 			echo $mysqli->error;
 			exit();
 		}
@@ -143,7 +143,7 @@
 							<th class="text-right">Award:</th>
 							<td>
 								<?php
-									if (isset($row["award"])) {
+									if (!empty($row["award"])) {
 										echo $row["award"];
 									}
 									else {
@@ -162,7 +162,7 @@
 			<div class="col-12">
 				<a href="search_results.php" role="button" class="btn btn-primary">Back to Search Results</a>
 				<?php if(!isset($error)): ?>
-					<a href="edit_form.php?track_id=<?php echo $_GET["dvd_id"]; ?>" class="btn btn-warning">Edit This Track</a>
+					<a href="edit_form.php?dvd_id=<?php echo $_GET["dvd_id"]; ?>" class="btn btn-warning">Edit This Track</a>
 				<?php endif; ?>
 			</div> <!-- .col -->
 		</div> <!-- .row -->
