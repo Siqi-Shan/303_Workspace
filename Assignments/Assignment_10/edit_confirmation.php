@@ -78,7 +78,7 @@
 			echo $mysqli->error;
 		}
 
-		if ($mysqli->affected_rows == 1) {
+		if ($mysqli->affected_rows == 1 || $mysqli->affected_rows == 0) {
 			$updated = true;
 		}
 		else {
