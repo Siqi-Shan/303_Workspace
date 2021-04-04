@@ -16,9 +16,9 @@
 	$sql = "SELECT dvd_titles.title title, dvd_titles.release_date release_date, g.genre genre, 
 			r.rating rating, dvd_titles.dvd_title_id id
 			FROM dvd_titles
-			JOIN genres g
+			LEFT JOIN genres g
     			ON g.genre_id = dvd_titles.genre_id
-			JOIN ratings r
+			LEFT JOIN ratings r
     			ON r.rating_id = dvd_titles.rating_id
 			WHERE 1=1";
 
@@ -126,7 +126,11 @@
 						<?php while ($row = $results->fetch_assoc()): ?>
 							<tr>
 								<td>
-									<a href="delete.php" class="btn btn-outline-danger delete-btn">
+									<a 	
+										onclick="return confirm('Are you sure you want to delete this DVD?');"
+										href="delete.php?dvd_id=<?php echo $row['id'] ?>&dvd_title=<?php echo $row["title"]; ?>" 
+										class="btn btn-outline-danger delete-btn"
+									>
 										Delete
 									</a>
 								</td>

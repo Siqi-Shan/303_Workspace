@@ -123,7 +123,7 @@
 
 				<?php else: ?>
 
-					<?php if ($updated) : ?>
+					<?php if ($updated): ?>
 						<div class="text-success">
 							<span class="font-italic"><?php echo $_POST['title']; ?></span> was successfully edited.
 						</div>

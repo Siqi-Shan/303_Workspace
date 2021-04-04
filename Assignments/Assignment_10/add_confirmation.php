@@ -122,7 +122,7 @@
 
 				<?php else: ?>
 
-					<?php if ($inserted) : ?>
+					<?php if ($inserted): ?>
 						<div class="text-success">
 							<span class="font-italic"><?php echo $_POST['title']; ?></span> was successfully edited.
 						</div>

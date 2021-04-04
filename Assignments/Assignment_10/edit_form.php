@@ -125,7 +125,7 @@
 
 								<?php while($row_label = $result_label->fetch_assoc()): ?>
 
-									<?php if($row["label_id"] == $row_label["label_id"]) :?>
+									<?php if($row["label_id"] == $row_label["label_id"]): ?>
 
 										<option selected value="<?php echo $row_label['label_id']; ?>">
 											<?php echo $row_label['label']; ?>
@@ -153,7 +153,7 @@
 
 								<?php while($row_sound = $result_sound->fetch_assoc()): ?>
 
-									<?php if($row["sound_id"] == $row_sound["sound_id"]) :?>
+									<?php if($row["sound_id"] == $row_sound["sound_id"]): ?>
 
 										<option selected value="<?php echo $row_sound['sound_id']; ?>">
 											<?php echo $row_sound['sound']; ?>
@@ -181,7 +181,7 @@
 
 								<?php while($row_genre = $result_genre->fetch_assoc()): ?>
 
-									<?php if($row["genre_id"] == $row_genre["genre_id"]) :?>
+									<?php if($row["genre_id"] == $row_genre["genre_id"]): ?>
 
 										<option selected value="<?php echo $row_genre['genre_id']; ?>">
 											<?php echo $row_genre['genre']; ?>
@@ -209,7 +209,7 @@
 
 								<?php while($row_rating = $result_rating->fetch_assoc()): ?>
 
-									<?php if($row["rating_id"] == $row_rating["rating_id"]) :?>
+									<?php if($row["rating_id"] == $row_rating["rating_id"]): ?>
 
 										<option selected value="<?php echo $row_rating['rating_id']; ?>">
 											<?php echo $row_rating['rating']; ?>
@@ -237,7 +237,7 @@
 
 								<?php while($row_format = $result_format->fetch_assoc()): ?>
 
-									<?php if($row["format_id"] == $row_format["format_id"]) :?>
+									<?php if($row["format_id"] == $row_format["format_id"]): ?>
 
 										<option selected value="<?php echo $row_format['format_id']; ?>">
 											<?php echo $row_format['format']; ?>
