@@ -52,11 +52,11 @@
 			$sound = NULL;
 		}
 
-		if (isset($_POST["award"]) && !empty($_POST["award"])) {
-			$award = trim($_POST["award"]);
+		if (isset($_POST["award"]) && !empty(trim($_POST["award"]))) {
+			$award = $_POST["award"];
 		}
 		else {
-			$award = "";
+			$award = NULL;
 		}
 
 		if (isset($_POST["release_date"]) && !empty($_POST["release_date"])) {
