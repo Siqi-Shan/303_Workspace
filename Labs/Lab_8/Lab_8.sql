@@ -36,3 +36,30 @@ FROM tracks
 JOIN albums a
     ON a.album_id = tracks.album_id
 GROUP BY tracks.album_id;
+
+SELECT orders.date date, orders.full_name full_name, mi.name name, p.payment payment, orders.source source
+FROM orders
+JOIN menu_items mi
+    ON mi.id = orders.menu_id
+JOIN payments p
+    ON p.id = orders.payment_id
+ORDER BY orders.date DESC;
+
+UPDATE orders
+SET menu_id = 5, payment_id = 1, source = 'Doordash'
+WHERE id = 9;
+
+SELECT c.name, COUNT(*) count
+FROM orders
+JOIN menu_items mi
+    ON mi.id = orders.menu_id
+JOIN categories c
+    ON c.id = mi.category_id
+GROUP BY mi.category_id;
+
+CREATE OR REPLACE featured_items AS
+    SELECT menu_items.id id, menu_items.name name, c.name category, menu_items.price price
+    FROM menu_items
+    JOIN categories c
+        ON c.id = menu_items.category_id
+    WHERE menu_items.is_featured = 1;
